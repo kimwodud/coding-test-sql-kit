@@ -1,0 +1,6 @@
+SELECT first.FLAVOR AS "FLAVOR"
+FROM FIRST_HALF first
+LEFT JOIN ICECREAM_INFO icecream
+ON first.FLAVOR = icecream.FLAVOR
+WHERE first.TOTAL_ORDER >=3000 AND icecream.INGREDIENT_TYPE = 'fruit_based'
+ORDER BY first.FLAVOR;
