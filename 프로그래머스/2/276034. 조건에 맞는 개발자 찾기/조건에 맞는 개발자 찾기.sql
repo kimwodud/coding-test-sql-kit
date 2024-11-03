@@ -1,0 +1,8 @@
+-- 비트연산자
+-- DISTINCT 사용안해서 틀림, 이유?? -> 둘 다 가진사람 때문?
+SELECT DISTINCT d.ID, d.EMAIL, d.FIRST_NAME, d.LAST_NAME
+FROM SKILLCODES s
+INNER JOIN DEVELOPERS d
+ON s.CODE & d.SKILL_CODE = s.CODE
+WHERE s.NAME = 'C#' OR s.NAME = 'Python'
+ORDER BY 1;
