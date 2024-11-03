@@ -3,4 +3,4 @@ FROM ANIMAL_INS
 WHERE DATETIME = (SELECT DATETIME -- 최소날짜 구하는 서브쿼리 
                   FROM ANIMAL_INS
                   ORDER BY DATETIME ASC
-                  FETCH FIRST 1 ROWS ONLY); 
+                  FETCH FIRST 1 ROWS ONLY);
